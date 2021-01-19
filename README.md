@@ -1,3 +1,8 @@
+# Source
+
+Credits: Followed the https://www.youtube.com/watch?v=PKwu15ldZ7k tutorial.
+To get started: Update the firebase.js with your own config.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
