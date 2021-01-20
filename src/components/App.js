@@ -1,7 +1,4 @@
-import Button from "react-bootstrap/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
-import Form from "react-bootstrap/Form";
 import Signup from "./Signup";
 import { Container } from "react-bootstrap";
 import { AuthProvider } from "../contexts/AuthContext";
@@ -13,19 +10,6 @@ import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
 
 function App() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    console.log(event.target.email.value);
-    console.log(event.target.password.value);
-  }
-
   return (
     <Container
       className="d-flex align-items-center justify-content-center"
@@ -48,34 +32,3 @@ function App() {
 }
 
 export default App;
-
-// {/* <div
-//   style={{
-//     display: "flex",
-//     justifyContent: "center",
-//     alignItems: "center",
-//   }}
-// >
-//   <Form onSubmit={handleSubmit}>
-//     <Form.Group size="lg" controlId="email">
-//       <Form.Label>Email</Form.Label>
-//       <Form.Control
-//         autoFocus
-//         type="email"
-//         value={email}
-//         onChange={(e) => setEmail(e.target.value)}
-//       />
-//     </Form.Group>
-//     <Form.Group size="lg" controlId="password">
-//       <Form.Label>Password</Form.Label>
-//       <Form.Control
-//         type="password"
-//         value={password}
-//         onChange={(e) => setPassword(e.target.value)}
-//       />
-//     </Form.Group>
-//     <Button block size="lg" type="submit" disabled={!validateForm()}>
-//       Login
-//     </Button>
-//   </Form>
-// </div> */}
